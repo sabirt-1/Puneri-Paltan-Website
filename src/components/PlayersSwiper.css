@@ -1,0 +1,155 @@
+
+.players-section {
+  width: 100%;
+  padding: 20px;
+  color: white;
+  /* position: relative; */
+}
+.swip{
+  position: relative;
+}
+.players-section .swiper-button-next,
+.players-section .swiper-button-prev {
+  position: absolute !important;   
+  top: auto !important;  
+  bottom: 0px !important;        
+  color: #fff !important;
+  background-color: #ddd !important;
+}
+
+.players-section .swiper-button-prev {
+  left: 91% !important;
+    width: 45px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #050505;
+}
+
+.players-section .swiper-button-next {
+  right: 0 !important;
+   width: 45px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #0b0b0b;
+}
+.title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.player-card {
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+.player-card:focus{
+  transform: scale(1.05);
+}
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.name h3 {
+  margin: 5px 0;
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  font-size: 16px;
+}
+
+.role {
+  color: #ff8500;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+.players-section .swiper{
+   overflow: hidden !important;
+}
+.players-section .swiper-wrapper{
+  overflow: visible;
+}
+
+.player-slide .player-card {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: visible;
+}
+
+.player-slide .player-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.3;
+  /* display: block; */
+}
+
+
+.player-slide .name {
+  position: absolute;
+  bottom: 60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 14px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+  width: max-content;
+}
+.role{
+  display: none;
+}
+.name{
+  opacity: 1;
+}
+.player-slide.swiper-slide-active .name {
+  bottom: -42px; 
+  background: transparent;
+  color: #fff;
+}
+.player-slide.swiper-slide-active .role{
+  display: block;
+}
+.player-slide.swiper-slide-active .player-img{
+  opacity: 1;
+}
+
+
+.swiper-pagination{
+  /* z-index: 50;
+  position: absolute;
+  display: none;
+   bottom: -40px !important;   */
+   display: none;
+}
+
+@media screen and (max-width:1024px) {
+  .play{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .players-section .swiper-button-prev {
+    left: 40% !important;
+  }
+  .players-section .swiper-button-next {
+    right: 40% !important;
+  }
+}
+@media screen and (max-width:600px){
+  .players-section .swiper-button-prev {
+    left: 30% !important;
+  }
+  .players-section .swiper-button-next{
+    right: 30% !important;
+  }
+}
